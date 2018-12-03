@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ExitButton
   - PlayButton
+  - HighscoreButton
+  - CreditsButton
   layers:
   - Default
   - TransparentFX
