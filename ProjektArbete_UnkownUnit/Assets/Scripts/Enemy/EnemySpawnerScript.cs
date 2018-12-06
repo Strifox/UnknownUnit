@@ -25,7 +25,7 @@ public class EnemySpawnerScript : MonoBehaviour {
         if (Time.time > nextSpawn && waveEnemies > amountOfEnemies)
         {
             nextSpawn = Time.time + spawnRate;
-            randY = Random.Range(-8f, 4f);
+            randY = -2f;
             randX = -18f;
             wheretospawn = new Vector2(randX, randY);
             Instantiate(enemy, wheretospawn, Quaternion.identity);
