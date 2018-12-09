@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4918438222331774}
   - component: {fileID: 212241073508964344}
   - component: {fileID: 58803266548132246}
+  - component: {fileID: 114712830893515902}
   m_Layer: 0
   m_Name: IceTower
   m_TagString: Untagged
@@ -56,6 +57,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114712830893515902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1941114078364172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253db266a5380245bcde9bcea761654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerType: 2
+  Name: 
+  Damage: 0
+  Range: 0
+  HP: 0
+  Level: 0
+  Description: 
+  BaseCost: 25
+  UpgradeCost: 0
+  TotalCost: 0
+  AttackCooldown: 0
+  projectiles: []
 --- !u!212 &212241073508964344
 SpriteRenderer:
   m_ObjectHideFlags: 1

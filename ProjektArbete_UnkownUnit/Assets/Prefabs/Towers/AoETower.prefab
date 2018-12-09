@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4967125841572804}
   - component: {fileID: 212119325413018850}
   - component: {fileID: 58687482178358938}
+  - component: {fileID: 114302717265561396}
   m_Layer: 0
   m_Name: AoETower
   m_TagString: Untagged
@@ -56,6 +57,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114302717265561396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321891951544196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253db266a5380245bcde9bcea761654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerType: 3
+  Name: 
+  Damage: 0
+  Range: 0
+  HP: 0
+  Level: 0
+  Description: 
+  BaseCost: 45
+  UpgradeCost: 0
+  TotalCost: 0
+  AttackCooldown: 0
+  projectiles: []
 --- !u!212 &212119325413018850
 SpriteRenderer:
   m_ObjectHideFlags: 1

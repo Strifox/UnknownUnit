@@ -7,6 +7,7 @@ namespace Assets.Scripts
     public class GameManager : Singleton<GameManager>
     {
         private int gold;
+
         public TowerBtn SelectedTower { get; set; }
 
         [SerializeField]
@@ -46,7 +47,7 @@ namespace Assets.Scripts
             if (Gold >= SelectedTower.Price)
             {
                 Gold -= SelectedTower.Price;
-            Hover.Instance.Deactivate();
+                Hover.Instance.Deactivate();
             }
         }
 
