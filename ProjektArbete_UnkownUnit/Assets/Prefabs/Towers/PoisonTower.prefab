@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4552585133633978}
   - component: {fileID: 212202112662744608}
   - component: {fileID: 58450665721812180}
+  - component: {fileID: 114231289820870790}
   m_Layer: 0
   m_Name: PoisonTower
   m_TagString: Untagged
@@ -56,6 +57,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114231289820870790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491069542201330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253db266a5380245bcde9bcea761654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerType: 1
+  Name: 
+  Damage: 0
+  Range: 0
+  HP: 0
+  Level: 0
+  Description: 
+  BaseCost: 40
+  UpgradeCost: 0
+  TotalCost: 0
+  AttackCooldown: 0
+  projectiles: []
 --- !u!212 &212202112662744608
 SpriteRenderer:
   m_ObjectHideFlags: 1

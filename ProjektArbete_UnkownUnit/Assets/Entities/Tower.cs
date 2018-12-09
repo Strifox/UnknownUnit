@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Entities
 {
-    public class Tower : MonoBehaviour {
+    public class Tower : Singleton<Tower> {
         public TowerType TowerType;
         public string Name;
         public int Damage;
