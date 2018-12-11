@@ -20,11 +20,11 @@ namespace Assets.Entities
         public List<Projectile> projectiles;
     }
 
-    public enum TowerType
-    {
-        Damage,
-        Poison,
-        Slow,
-        AreaOfEffect
-    }
+		public enum TowerType
+		{
+					Damage,
+					Poison,
+					Slow,
+					AreaOfEffect
+		}
 }
