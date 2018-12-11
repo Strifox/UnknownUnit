@@ -65,7 +65,7 @@ public class MapManager : Singleton<MapManager>
         //Takes the position of the last tile and stores it in maxTile and passes its to cameraMovement
         maxTile = Tiles[new Point(mapX - 1, mapY - 1)].transform.position;
 
-        cameraMovement.SetCameraLimits(new Vector3(maxTile.x + TileSize, maxTile.y -TileSize));
+        //cameraMovement.SetCameraLimits(new Vector3(maxTile.x + TileSize, maxTile.y -TileSize));
     }
 
     private void PlaceTile(string tileArray, int x, int y, Vector3 mapStart)

@@ -40,15 +40,15 @@ public class CameraMovement : MonoBehaviour
             transform.Translate(Vector3.right * cameraSpeed * Time.deltaTime);
         }
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, xMaxLimit), Mathf.Clamp(transform.position.y, yMinLimit, 0), -10);
+       // transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, xMaxLimit), Mathf.Clamp(transform.position.y, yMinLimit, 0), -10);
     }
 
-    public void SetCameraLimits(Vector3 maxTile)
-    {
-        //Right button corner on screen
-        Vector3 worldPointPosition = Camera.main.ViewportToWorldPoint(new Vector3(1, 0));
+    //public void SetCameraLimits(Vector3 maxTile)
+    //{
+    //    //Right button corner on screen
+    //    Vector3 worldPointPosition = Camera.main.ViewportToWorldPoint(new Vector3(1, 0));
 
-        xMaxLimit = maxTile.x - worldPointPosition.x;
-        yMinLimit = maxTile.y - worldPointPosition.y;
-    }
+    //    xMaxLimit = maxTile.x - worldPointPosition.x;
+    //    yMinLimit = maxTile.y - worldPointPosition.y;
+    //}
 }
