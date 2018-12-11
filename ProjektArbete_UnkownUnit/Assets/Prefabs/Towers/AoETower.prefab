@@ -79,12 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerType: 3
-  Name: 
-  Damage: 0
+  Name: Are of Effect
+  Damage: 20
   Range: 0
   HP: 0
   Level: 1
-  Description: 
+  Description: Shoots a bomb that damages multiple enemies
   BaseCost: 45
   UpgradeCost: 90
   TotalCost: 45
