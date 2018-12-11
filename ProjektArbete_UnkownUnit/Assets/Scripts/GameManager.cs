@@ -25,7 +25,7 @@ namespace Assets.Scripts
 
         void Start()
         {
-            Gold = 100;
+            Gold = 1000;
         }
 
         void Update()
