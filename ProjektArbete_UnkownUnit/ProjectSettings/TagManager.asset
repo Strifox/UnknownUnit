@@ -10,6 +10,7 @@ TagManager:
   - CreditsButton
   - Tower
   - UI
+  - Button
   layers:
   - Default
   - TransparentFX

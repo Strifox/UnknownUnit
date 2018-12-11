@@ -79,12 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerType: 0
-  Name: 
-  Damage: 0
+  Name: Damage
+  Damage: 5
   Range: 0
   HP: 0
   Level: 1
-  Description: 
+  Description: Standard damage tower
   BaseCost: 20
   UpgradeCost: 40
   TotalCost: 20

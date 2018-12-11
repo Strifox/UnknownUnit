@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class UpgradeBtn : MonoBehaviour {
 
-	public GameObject SelectedTower;
+	public Tower SelectedTower;
 	private UnityEngine.UI.Image image;
 	private Text price;
 
@@ -28,8 +28,7 @@ public class UpgradeBtn : MonoBehaviour {
 		{
 			image.enabled = true;
 			price.enabled = true;
-			var tower = SelectedTower.GetComponent<Tower>();
-			price.text = "Price " + tower.UpgradeCost;
+			price.text = "Price " + SelectedTower.UpgradeCost;
 		}
 
 		if (Input.GetMouseButtonDown(0))
@@ -39,9 +38,9 @@ public class UpgradeBtn : MonoBehaviour {
 
 			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
-			if (hit.collider != null && (hit.collider.tag == "Tower" || hit.collider.tag == "UI"))
+			if (hit.collider != null && hit.collider.tag == "Tower")
 			{
-				SelectedTower = hit.transform.gameObject;
+				SelectedTower = hit.transform.gameObject.GetComponent<Tower>();
 			}
 		}
 
@@ -53,14 +52,13 @@ public class UpgradeBtn : MonoBehaviour {
 
 	public void UpgradeTower()
 	{
-		var tower = SelectedTower.GetComponent<Tower>();
-		if (GameManager.Instance.Gold >= tower.UpgradeCost)
+		if (GameManager.Instance.Gold >= SelectedTower.UpgradeCost)
 		{
-			tower.Damage += 20;
-			tower.Level++;
-			var preUpgradeCost = tower.UpgradeCost;
-			tower.UpgradeCost += 20;
-			tower.TotalCost += preUpgradeCost;
+			SelectedTower.Damage += 20;
+			SelectedTower.Level++;
+			var preUpgradeCost = SelectedTower.UpgradeCost;
+			SelectedTower.UpgradeCost += 20;
+			SelectedTower.TotalCost += preUpgradeCost;
 			GameManager.Instance.Gold -= preUpgradeCost;
 		}
 	}
