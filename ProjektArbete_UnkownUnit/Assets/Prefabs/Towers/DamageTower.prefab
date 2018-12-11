@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4156659767100780}
   - component: {fileID: 212179796892092432}
-  - component: {fileID: 58528567273406920}
   - component: {fileID: 114785308285642814}
+  - component: {fileID: 61179895175568106}
   m_Layer: 0
   m_Name: DamageTower
   m_TagString: Tower
@@ -44,7 +44,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61179895175568106
 BoxCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1931758189595994}
@@ -65,7 +65,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114785308285642814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,10 +83,10 @@ MonoBehaviour:
   Damage: 0
   Range: 0
   HP: 0
-  Level: 0
+  Level: 1
   Description: 
   BaseCost: 20
-  UpgradeCost: 5000
+  UpgradeCost: 40
   TotalCost: 0
   AttackCooldown: 0
   projectiles: []

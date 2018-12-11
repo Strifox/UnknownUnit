@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4967125841572804}
   - component: {fileID: 212119325413018850}
-  - component: {fileID: 58687482178358938}
   - component: {fileID: 114302717265561396}
+  - component: {fileID: 61900907778300338}
   m_Layer: 0
   m_Name: AoETower
   m_TagString: Tower
@@ -44,7 +44,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61900907778300338
 BoxCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321891951544196}
@@ -65,7 +65,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114302717265561396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,10 +83,10 @@ MonoBehaviour:
   Damage: 0
   Range: 0
   HP: 0
-  Level: 0
+  Level: 1
   Description: 
   BaseCost: 45
-  UpgradeCost: 0
+  UpgradeCost: 90
   TotalCost: 0
   AttackCooldown: 0
   projectiles: []
