@@ -9,7 +9,7 @@ namespace Assets.Scripts
         // Use this for initialization
         void Start()
         {
-            this.spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -29,7 +29,7 @@ namespace Assets.Scripts
 
         public void Activate(Sprite sprite)
         {
-            this.spriteRenderer.sprite = sprite;
+            spriteRenderer.sprite = sprite;
             spriteRenderer.enabled = true;
         }
 
