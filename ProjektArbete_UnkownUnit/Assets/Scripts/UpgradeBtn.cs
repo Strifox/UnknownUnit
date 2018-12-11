@@ -1,4 +1,5 @@
 ﻿using Assets.Entities;
+using Assets.Scripts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -53,9 +54,14 @@ public class UpgradeBtn : MonoBehaviour {
 	public void UpgradeTower()
 	{
 		var tower = SelectedTower.GetComponent<Tower>();
-		tower.Damage += 20;
-		tower.Level++;
-		var preUpgradeCost = tower.UpgradeCost;
-		tower.UpgradeCost *= 2;
+		if (GameManager.Instance.Gold >= tower.UpgradeCost)
+		{
+			tower.Damage += 20;
+			tower.Level++;
+			var preUpgradeCost = tower.UpgradeCost;
+			tower.UpgradeCost += 20;
+			tower.TotalCost += preUpgradeCost;
+			GameManager.Instance.Gold -= preUpgradeCost;
+		}
 	}
 }

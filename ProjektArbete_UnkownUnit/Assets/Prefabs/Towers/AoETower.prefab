@@ -87,7 +87,7 @@ MonoBehaviour:
   Description: 
   BaseCost: 45
   UpgradeCost: 90
-  TotalCost: 0
+  TotalCost: 45
   AttackCooldown: 0
   projectiles: []
 --- !u!212 &212119325413018850
