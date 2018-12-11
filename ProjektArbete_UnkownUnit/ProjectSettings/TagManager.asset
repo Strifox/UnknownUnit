@@ -8,6 +8,8 @@ TagManager:
   - PlayButton
   - HighscoreButton
   - CreditsButton
+  - Tower
+  - UI
   layers:
   - Default
   - TransparentFX
