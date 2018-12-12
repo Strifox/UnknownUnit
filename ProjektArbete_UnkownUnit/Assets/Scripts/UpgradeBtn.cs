@@ -4,18 +4,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 public class UpgradeBtn : MonoBehaviour {
 
 	public Tower SelectedTower;
-	private UnityEngine.UI.Image image;
+	private Image image;
+	private Button button;
 	private Text price;
 
 	void Start () {
-		image = GetComponent<UnityEngine.UI.Image>();
+		image = GetComponent<Image>();
 		price = GetComponentInChildren<Text>();
+		button = GetComponent<Button>();
 	}
 
 	void Update() {
@@ -28,7 +29,13 @@ public class UpgradeBtn : MonoBehaviour {
 		{
 			image.enabled = true;
 			price.enabled = true;
-			price.text = "Price " + SelectedTower.UpgradeCost;
+			if(SelectedTower.Level < 5)
+				price.text = "Price " + SelectedTower.UpgradeCost;
+			else
+			{
+				price.text = "MAX LEVEL";
+				button.transition = Selectable.Transition.None;
+			}
 		}
 
 		if (Input.GetMouseButtonDown(0))
@@ -57,7 +64,7 @@ public class UpgradeBtn : MonoBehaviour {
 
 	public void UpgradeTower()
 	{
-		if (GameManager.Instance.Gold >= SelectedTower.UpgradeCost)
+		if (GameManager.Instance.Gold >= SelectedTower.UpgradeCost && SelectedTower.Level < 5)
 		{
 			SelectedTower.Damage += 20;
 			SelectedTower.Level++;
