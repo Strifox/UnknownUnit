@@ -36,7 +36,7 @@ namespace Assets.Scripts
         public void Deactivate()
         {
             spriteRenderer.enabled = false;
-            GameManager.Instance.SelectedTower = null;
+            GameManager.Instance.Tower = null;
         }
     }
 }

@@ -12,9 +12,9 @@ namespace Assets.Scripts
 
 		private void PlacingTower()
 		{
-			if(GameManager.Instance.SelectedTower != null)
+			if(GameManager.Instance.Tower != null)
 			{
-				Instantiate(GameManager.Instance.SelectedTower.TowerPrefab, transform.position, Quaternion.identity);
+				Instantiate(GameManager.Instance.Tower.TowerPrefab, transform.position, Quaternion.identity);
 				GameManager.Instance.BuyTower();
 			}
 		}
