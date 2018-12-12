@@ -38,9 +38,14 @@ public class UpgradeBtn : MonoBehaviour {
 
 			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
-			if (hit.collider != null && hit.collider.tag == "Tower")
+			if (hit.collider != null)
 			{
-				SelectedTower = hit.transform.gameObject.GetComponent<Tower>();
+				if(hit.collider.tag == "Tower")
+					SelectedTower = hit.transform.gameObject.GetComponent<Tower>();
+			}
+			else
+			{
+				SelectedTower = null;
 			}
 		}
 

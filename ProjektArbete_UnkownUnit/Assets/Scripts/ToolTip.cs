@@ -42,11 +42,6 @@ public class ToolTip : MonoBehaviour
 		{
 			SelectedTower = null;
 		}
-
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			SelectedTower = null;
-		}
 	}
 
 	public void ShowToolTip()
