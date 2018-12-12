@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
+using Assets.Entities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,10 +10,12 @@ namespace Assets.Scripts
     {
         private int gold;
 
-        public TowerBtn SelectedTower { get; set; }
+        public TowerBtn Tower { get; set; }
+        public Tower selectedTower;
 
-        [SerializeField]
-        private Text goldLabel;
+        [SerializeField] private Text goldLabel;
+        [SerializeField] private Text lvlLabel;
+        [SerializeField] private Text dmgLabel;
 
         public int Gold
         {
@@ -26,10 +30,46 @@ namespace Assets.Scripts
         void Start()
         {
             Gold = 1000;
+            this.lvlLabel.enabled = false;
+            this.dmgLabel.enabled = false;
         }
 
         void Update()
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+                RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+                if (hit.collider != null)
+                {
+                    if (hit.collider.tag == "Tower")
+                    {
+                        selectedTower = hit.transform.gameObject.GetComponent<Tower>();
+                        this.lvlLabel.enabled = true;
+                        this.dmgLabel.enabled = true;
+                    }
+                }
+                else
+                {
+                    selectedTower = null;
+                }
+            }
+
+            if (selectedTower != null)
+            {
+                this.lvlLabel.text = "Level: " + this.selectedTower.Level;
+                this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
+            }
+            else
+            {
+
+                this.lvlLabel.enabled = false;
+                this.dmgLabel.enabled = false;
+            }
+
             DropTower();
         }
 
@@ -37,16 +77,16 @@ namespace Assets.Scripts
         {
             if (Gold >= towerBtn.Price)
             {
-                this.SelectedTower = towerBtn;
+                this.Tower = towerBtn;
                 Hover.Instance.Activate(towerBtn.Sprite);
             }
         }
 
         public void BuyTower()
         {
-            if (Gold >= SelectedTower.Price)
+            if (Gold >= Tower.Price)
             {
-                Gold -= SelectedTower.Price;
+                Gold -= Tower.Price;
                 Hover.Instance.Deactivate();
             }
         }
