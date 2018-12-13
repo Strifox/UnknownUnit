@@ -19,7 +19,7 @@ public class MapManager : Singleton<MapManager>
     public Dictionary<Point, TileScript> Tiles;
 
     //Sets the X tile width to the same as SpriteRenderer element 0 in MapManager
-    public float TileSize { get { return tilePrefabs[1].GetComponent<SpriteRenderer>().sprite.bounds.size.x; } }
+    public float TileSize { get { return tilePrefabs[0].GetComponent<SpriteRenderer>().sprite.bounds.size.x; } }
 
     // Use this for initialization
     void Start()
@@ -63,7 +63,7 @@ public class MapManager : Singleton<MapManager>
         }
 
         //Takes the position of the last tile and stores it in maxTile and passes its to cameraMovement
-        maxTile = Tiles[new Point(mapX - 1, mapY - 1)].transform.position;
+        //maxTile = Tiles[new Point(mapX - 1, mapY - 1)].transform.position;
 
         //cameraMovement.SetCameraLimits(new Vector3(maxTile.x + TileSize, maxTile.y -TileSize));
     }

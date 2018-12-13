@@ -10,7 +10,7 @@ namespace Assets.Scripts
     {
         private int gold;
 
-        public TowerBtn Tower { get; set; }
+        public TowerBtn TowerBtn { get; set; }
         public Tower selectedTower;
 
         [SerializeField] private Text goldLabel;
@@ -33,21 +33,6 @@ namespace Assets.Scripts
             this.lvlLabel.enabled = false;
             this.dmgLabel.enabled = false;
         }
-
-        //public int Gold
-        //{
-        //    get { return gold; }
-        //    set
-        //    {
-        //        gold = value;
-        //        goldLabel.text = "Gold: " + value;
-        //    }
-        //}
-
-        //void Start()
-        //{
-        //    Gold = 100;
-        //}
 
         void Update()
         {
@@ -92,16 +77,16 @@ namespace Assets.Scripts
         {
             if (Gold >= towerBtn.Price)
             {
-                this.Tower = towerBtn;
+                this.TowerBtn = towerBtn;
                 Hover.Instance.Activate(towerBtn.Sprite);
             }
         }
 
         public void BuyTower()
         {
-            if (Gold >= Tower.Price)
+            if (Gold >= TowerBtn.Price)
             {
-                Gold -= Tower.Price;
+                Gold -= TowerBtn.Price;
                 Hover.Instance.Deactivate();
             }
         }

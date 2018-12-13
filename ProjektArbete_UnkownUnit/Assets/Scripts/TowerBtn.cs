@@ -28,13 +28,5 @@ namespace Assets.Scripts
         {
             get { return price; }
         }
-
-        private void Start()
-        {
-           // TowerPrice.text = "Price: " + price;
-        }
-
-       
-
     }
 }

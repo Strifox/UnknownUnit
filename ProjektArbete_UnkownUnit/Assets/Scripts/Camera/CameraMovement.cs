@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
             transform.Translate(Vector3.right * cameraSpeed * Time.deltaTime);
         }
 
-       // transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, xMaxLimit), Mathf.Clamp(transform.position.y, yMinLimit, 0), -10);
+        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, xMaxLimit), Mathf.Clamp(transform.position.y, yMinLimit, 0), -10);
     }
 
     //public void SetCameraLimits(Vector3 maxTile)

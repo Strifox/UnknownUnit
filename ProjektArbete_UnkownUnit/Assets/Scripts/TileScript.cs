@@ -40,10 +40,10 @@ public class TileScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        ColorTile(occupiedTileColor);
+        //ColorTile(occupiedTileColor);
 
         //Only tries to place a tower on the ground if the mouse is not over a button
-        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.Tower != null)
+        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
         {
             if(IsEmpty)
             {
@@ -67,10 +67,10 @@ public class TileScript : MonoBehaviour
 
     private void PlaceTower()
     {
-        GameObject tower = Instantiate(GameManager.Instance.Tower.TowerPrefab, transform.position, Quaternion.identity);
-        tower.transform.SetParent(transform);
+        GameObject tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
+       // tower.transform.SetParent(transform);
 
-        IsEmpty = false;
+       // IsEmpty = false;
         GameManager.Instance.BuyTower();
         ColorTile(Color.white);
     }

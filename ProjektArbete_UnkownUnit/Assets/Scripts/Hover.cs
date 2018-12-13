@@ -22,7 +22,9 @@ namespace Assets.Scripts
         {
             if (spriteRenderer.enabled)
             {
+
                 transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
                 transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             }
         }
@@ -36,7 +38,7 @@ namespace Assets.Scripts
         public void Deactivate()
         {
             spriteRenderer.enabled = false;
-            GameManager.Instance.Tower = null;
+            GameManager.Instance.TowerBtn = null;
         }
     }
 }
