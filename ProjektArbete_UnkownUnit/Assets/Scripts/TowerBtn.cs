@@ -5,14 +5,8 @@ namespace Assets.Scripts
 {
     public class TowerBtn : MonoBehaviour
     {
-        private void Start()
-        {
-            TowerPrice.text = "Price: " + price;
-        }
-
         [SerializeField]
         private GameObject towerPrefab;
-
         public GameObject TowerPrefab
         {
             get { return towerPrefab; }
@@ -23,7 +17,6 @@ namespace Assets.Scripts
 
         [SerializeField]
         private Sprite sprite;
-
         public Sprite Sprite
         {
             get { return sprite; }
@@ -31,10 +24,17 @@ namespace Assets.Scripts
 
         [SerializeField]
         private int price;
-
         public int Price
         {
             get { return price; }
         }
+
+        private void Start()
+        {
+           // TowerPrice.text = "Price: " + price;
+        }
+
+       
+
     }
 }

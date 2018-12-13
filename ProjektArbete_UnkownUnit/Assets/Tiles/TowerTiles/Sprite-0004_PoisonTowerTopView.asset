@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Sprite-0004_PoisonTowerTopView
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: eb8c020c466901c4692dcc2c5ddd3175, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d42c13b05741f23409ad96a3254e62aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

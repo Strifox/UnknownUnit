@@ -34,6 +34,21 @@ namespace Assets.Scripts
             this.dmgLabel.enabled = false;
         }
 
+        //public int Gold
+        //{
+        //    get { return gold; }
+        //    set
+        //    {
+        //        gold = value;
+        //        goldLabel.text = "Gold: " + value;
+        //    }
+        //}
+
+        //void Start()
+        //{
+        //    Gold = 100;
+        //}
+
         void Update()
         {
             if (Input.GetMouseButtonDown(0))
@@ -99,3 +114,5 @@ namespace Assets.Scripts
     }
 
 }
+
+  
