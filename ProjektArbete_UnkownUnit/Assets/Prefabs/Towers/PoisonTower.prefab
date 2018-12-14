@@ -79,15 +79,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerType: 1
-  Name: 
-  Damage: 0
+  Name: Poison Tower
+  Damage: 15
   Range: 0
   HP: 0
-  Level: 0
-  Description: 
-  BaseCost: 0
-  UpgradeCost: 0
-  TotalCost: 0
+  Level: 1
+  Description: Poisons the enemy, deals 25 damage over 5sec
+  BaseCost: 40
+  UpgradeCost: 80
+  TotalCost: 120
   AttackCooldown: 0
   projectiles: []
 --- !u!212 &212585814892716826

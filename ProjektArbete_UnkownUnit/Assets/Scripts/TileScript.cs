@@ -68,9 +68,9 @@ public class TileScript : MonoBehaviour
     private void PlaceTower()
     {
         GameObject tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
-       // tower.transform.SetParent(transform);
 
-       // IsEmpty = false;
+        tower.transform.SetParent(transform);
+        IsEmpty = false;
         GameManager.Instance.BuyTower();
         ColorTile(Color.white);
     }

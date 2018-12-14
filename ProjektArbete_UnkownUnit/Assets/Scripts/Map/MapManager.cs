@@ -24,6 +24,11 @@ public class MapManager : Singleton<MapManager>
     // Use this for initialization
     void Start()
     {
+        
+    }
+
+    private void Awake()
+    {
         CreateMap();
     }
 

@@ -79,15 +79,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerType: 2
-  Name: 
-  Damage: 0
+  Name: Ice Tower
+  Damage: 10
   Range: 0
   HP: 0
-  Level: 0
-  Description: 
-  BaseCost: 0
-  UpgradeCost: 0
-  TotalCost: 0
+  Level: 1
+  Description: Slows a enemy down for 5s
+  BaseCost: 25
+  UpgradeCost: 50
+  TotalCost: 75
   AttackCooldown: 0
   projectiles: []
 --- !u!212 &212766282154485958

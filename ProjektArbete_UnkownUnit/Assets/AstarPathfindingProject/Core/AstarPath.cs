@@ -861,9 +861,12 @@ public class AstarPath : VersionedMonoBehaviour {
 
 		navmeshUpdates.Update();
 
-		// Execute blocking actions such as graph updates
-		// when not scanning
-		if (!isScanning) {
+        var graphToScan = AstarPath.active.data.gridGraph;
+        AstarPath.active.Scan(graphToScan);
+
+        // Execute blocking actions such as graph updates
+        // when not scanning
+        if (!isScanning) {
 			PerformBlockingActions();
 		}
 

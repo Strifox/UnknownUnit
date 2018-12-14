@@ -11,7 +11,7 @@ public class EnemySpawnerScript : MonoBehaviour {
     Vector2 wheretospawn;
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
-    int waveEnemies = 3;
+    int waveEnemies = 30;
     int amountOfEnemies;
 
 	// Use this for initialization
@@ -26,7 +26,7 @@ public class EnemySpawnerScript : MonoBehaviour {
         {
             nextSpawn = Time.time + spawnRate;
             randY = -2f;
-            randX = -18f;
+            randX = -14.5f;
             wheretospawn = new Vector2(randX, randY);
             Instantiate(enemy, wheretospawn, Quaternion.identity);
             amountOfEnemies++;
