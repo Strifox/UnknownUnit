@@ -5,6 +5,11 @@ namespace Assets.Scripts
 {
     public class TowerBtn : MonoBehaviour
     {
+        void Start()
+        {
+            TowerPrice.text = "Price: " + price;
+        }
+
         [SerializeField]
         private GameObject towerPrefab;
         public GameObject TowerPrefab

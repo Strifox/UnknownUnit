@@ -8,19 +8,14 @@ using UnityEngine.UI;
 public class SellBtn : MonoBehaviour
 {
 	public Tower SelectedTower;
-	private UnityEngine.UI.Image image;
+	private Image image;
 	private Text sellPrice;
 
 	[SerializeField] private Text PaybackText;
 
-	private int payback;
+    public int Payback { get; set; }
 
-	public int Payback
-	{
-		get { return payback; }
-		set { payback = value; }
-	}
-	// Use this for initialization
+    // Use this for initialization
 	void Start()
 	{
 		image = GetComponent<UnityEngine.UI.Image>();
@@ -61,8 +56,8 @@ public class SellBtn : MonoBehaviour
 			image.enabled = true;
 			sellPrice.enabled = true;
 			var tower = SelectedTower.GetComponent<Tower>();
-			payback = tower.TotalCost / 4;
-			this.PaybackText.text = "Get: " + payback;
+			Payback = tower.TotalCost / 4;
+			this.PaybackText.text = "Get: " + Payback;
 		}
 	}
 
