@@ -87,10 +87,6 @@ namespace Assets.Scripts
             if (Gold >= TowerBtn.Price)
             {
                 Gold -= TowerBtn.Price;
-                if (!Input.GetKeyDown(KeyCode.LeftShift))
-                {
-                    Hover.Instance.Deactivate();
-                }
             }
         }
 
