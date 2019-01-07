@@ -55,6 +55,7 @@ namespace Assets.Scripts
                 else
                 {
                     selectedTower = null;
+                    selectedTower.DeSelect();
                 }
             }
 
@@ -62,10 +63,10 @@ namespace Assets.Scripts
             {
                 this.lvlLabel.text = "Level: " + this.selectedTower.Level;
                 this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
+                this.selectedTower.Select();
             }
             else
             {
-
                 this.lvlLabel.enabled = false;
                 this.dmgLabel.enabled = false;
             }

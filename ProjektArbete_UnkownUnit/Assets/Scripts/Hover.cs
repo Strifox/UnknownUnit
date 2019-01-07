@@ -5,11 +5,13 @@ namespace Assets.Scripts
     public class Hover : Singleton<Hover>
     {
         private SpriteRenderer spriteRenderer;
+        private SpriteRenderer rangeSpriteRenderer;
 
         // Use this for initialization
         void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
+            this.rangeSpriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -33,11 +35,13 @@ namespace Assets.Scripts
         {
             spriteRenderer.sprite = sprite;
             spriteRenderer.enabled = true;
+            rangeSpriteRenderer.enabled = true;
         }
 
         public void Deactivate()
         {
             spriteRenderer.enabled = false;
+            rangeSpriteRenderer.enabled = false;
             GameManager.Instance.TowerBtn = null;
         }
     }

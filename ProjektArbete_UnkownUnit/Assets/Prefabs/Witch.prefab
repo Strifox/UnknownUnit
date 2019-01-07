@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 61635706140633304}
   - component: {fileID: 58682136042283810}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: Witch
+  m_TagString: Witch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

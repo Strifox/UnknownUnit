@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Entities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,7 +9,7 @@ public class TileScript : MonoBehaviour
 {
     //TODO: Not Placing towers on correct tile
 
-    
+
     public Point GridPosition { get; private set; }
     private Color32 occupiedTileColor = new Color32(255, 0, 0, 255);
     private Color32 emptyTileColor = new Color32(0, 255, 250, 0);
@@ -45,7 +46,7 @@ public class TileScript : MonoBehaviour
         //Only tries to place a tower on the ground if the mouse is not over a button
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
         {
-            if(IsEmpty)
+            if (IsEmpty)
             {
                 ColorTile(emptyTileColor);
             }
