@@ -25,7 +25,6 @@ public class TileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void Setup(Point gridPosition, Vector3 position, Transform parent)
@@ -54,7 +53,13 @@ public class TileScript : MonoBehaviour
             {
                 ColorTile(occupiedTileColor);
             }
-            else if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift))
+            {
+                PlaceTower();
+                Hover.Instance.Deactivate();
+                GameManager.Instance.TowerBtn = null;
+            }
+            if (Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftShift))
             {
                 PlaceTower();
             }
@@ -68,12 +73,14 @@ public class TileScript : MonoBehaviour
 
     private void PlaceTower()
     {
-        GameObject tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
-
-        tower.transform.SetParent(transform);
-        IsEmpty = false;
-        GameManager.Instance.BuyTower();
-        ColorTile(Color.white);
+        if(GameManager.Instance.Gold >= GameManager.Instance.TowerBtn.Price)
+        {
+            GameObject tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
+            tower.transform.SetParent(transform);
+            IsEmpty = false;
+            GameManager.Instance.BuyTower();
+            ColorTile(Color.white);
+        }
     }
 
     private void ColorTile(Color32 newColor)
