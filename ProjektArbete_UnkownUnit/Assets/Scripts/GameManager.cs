@@ -45,9 +45,10 @@ namespace Assets.Scripts
 
                 if (hit.collider != null)
                 {
-                    if (hit.collider.tag == "Tower")
+                    if (hit.collider.CompareTag("Tower"))
                     {
                         selectedTower = hit.transform.gameObject.GetComponent<Tower>();
+                        this.selectedTower.Select(selectedTower);
                         this.lvlLabel.enabled = true;
                         this.dmgLabel.enabled = true;
                     }
@@ -55,7 +56,6 @@ namespace Assets.Scripts
                 else
                 {
                     selectedTower = null;
-                    selectedTower.DeSelect();
                 }
             }
 
@@ -63,7 +63,7 @@ namespace Assets.Scripts
             {
                 this.lvlLabel.text = "Level: " + this.selectedTower.Level;
                 this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
-                this.selectedTower.Select();
+                
             }
             else
             {

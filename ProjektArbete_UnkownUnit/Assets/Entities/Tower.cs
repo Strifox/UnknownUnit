@@ -20,8 +20,6 @@ namespace Assets.Entities
         public List<Projectile> projectiles;
 
         private SpriteRenderer mySpriteRenderer;
-        private Enemy targetEnemy;
-        private Queue<Enemy> enemies = new Queue<Enemy>();
 
         void Start()
         {
@@ -30,33 +28,20 @@ namespace Assets.Entities
 
         void Update()
         {
-            Debug.Log(targetEnemy);
         }
 
 
-        public void Select()
+        public void Select(Tower tower)
         {
-            mySpriteRenderer.enabled = true;
+            mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
         }
 
-        public void DeSelect()
-        {
-            mySpriteRenderer.enabled = false;
-        }
+        //public void DeSelect(Tower tower)
+        //{
+        //    mySpriteRenderer.enabled = false;
+        //}
 
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Witch"))
-            {
-                enemies.Enqueue(other.GetComponent<Enemy>());
-            }
-        }
 
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.CompareTag("Witch"))
-                targetEnemy = null;
-        }
     }
 
 		public enum TowerType
