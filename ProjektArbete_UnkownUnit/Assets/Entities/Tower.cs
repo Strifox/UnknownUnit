@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace Assets.Entities
 {
-    public class Tower : Singleton<Tower> {
+    public class Tower : Singleton<Tower>
+    {
         public TowerType TowerType;
         public string Name;
         public int Damage;
@@ -33,7 +34,8 @@ namespace Assets.Entities
 
         public void Select(Tower tower)
         {
-            mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
+            if (tower != null)
+                mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
         }
 
         //public void DeSelect(Tower tower)
@@ -44,11 +46,11 @@ namespace Assets.Entities
 
     }
 
-		public enum TowerType
-		{
-					Damage,
-					Poison,
-					Slow,
-					AreaOfEffect
-		}
+    public enum TowerType
+    {
+        Damage,
+        Poison,
+        Slow,
+        AreaOfEffect
+    }
 }

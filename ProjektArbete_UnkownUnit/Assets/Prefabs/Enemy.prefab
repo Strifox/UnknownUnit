@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 61635706140633304}
   - component: {fileID: 427508927462306337}
   m_Layer: 0
-  m_Name: Witch
-  m_TagString: Witch
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdba4e59d480b14baf09e0498b9f183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Witch
+  Name: Enemy
   HP: 0
   Damage: 0
   MovementSpeed: 0

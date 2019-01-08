@@ -121,7 +121,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
       propertyPath: m_Name
-      value: Witch
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
       propertyPath: m_TagString
@@ -177,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 61635706140633304, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61635706140633304, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
@@ -213,6 +217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Simulated
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427508927462306337, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: Name
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58682136042283810, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
@@ -460,9 +469,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f860b818e6748484f8ed009bf24bba36, type: 3}
-  m_Color: {r: 0.50284797, g: 0.53475904, b: 0.9433962, a: 0.22352941}
+  m_Color: {r: 0.24474901, g: 0.2581094, b: 0.41509432, a: 0.72156864}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
