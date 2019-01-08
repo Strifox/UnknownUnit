@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Range : MonoBehaviour
 {
-
-
     private Enemy _targetEnemy;
     // Start is called before the first frame update
     void Start()
@@ -17,12 +15,11 @@ public class Range : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_targetEnemy);
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Witch"))
-            _targetEnemy = other.gameObject.GetComponentInChildren<Enemy>();
+        if(other.gameObject.tag == "Enemy")
+            Debug.Log("Hit");
     }
 }

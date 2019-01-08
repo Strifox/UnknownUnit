@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Witch
       objectReference: {fileID: 0}
+    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4414494260517868, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.08
@@ -193,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
@@ -482,7 +486,7 @@ GameObject:
   - component: {fileID: 469632257}
   m_Layer: 0
   m_Name: AI
-  m_TagString: Witch
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
