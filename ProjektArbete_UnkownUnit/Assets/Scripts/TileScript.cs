@@ -14,6 +14,7 @@ public class TileScript : MonoBehaviour
     private Color32 emptyTileColor = new Color32(0, 255, 250, 0);
     private SpriteRenderer spriteRenderer;
     public bool IsEmpty { get; private set; }
+    bool isLeftShiftPressed = false;
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,11 @@ public class TileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Hover.Instance.Deactivate();
+            GameManager.Instance.TowerBtn = null;
+        }
     }
 
     public void Setup(Point gridPosition, Vector3 position, Transform parent)
@@ -44,23 +50,27 @@ public class TileScript : MonoBehaviour
         //Only tries to place a tower on the ground if the mouse is not over a button
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
         {
-            if(IsEmpty)
+            if (!Input.GetKey(KeyCode.LeftShift))
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    PlaceTower();
+                    Hover.Instance.Deactivate();
+                    GameManager.Instance.TowerBtn = null;
+                }
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (Input.GetMouseButtonDown(0))
+                    PlaceTower();
+            }
+            if (IsEmpty)
             {
                 ColorTile(emptyTileColor);
             }
             if (!IsEmpty)
             {
                 ColorTile(occupiedTileColor);
-            }
-            if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift))
-            {
-                PlaceTower();
-                Hover.Instance.Deactivate();
-                GameManager.Instance.TowerBtn = null;
-            }
-            if (Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftShift))
-            {
-                PlaceTower();
             }
         }
     }
