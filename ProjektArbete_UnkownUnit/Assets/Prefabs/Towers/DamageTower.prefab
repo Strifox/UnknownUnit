@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447f223f05b26a459d580f9aac5a551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesInRange: []
 --- !u!1 &1907086568854736
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4055146257736628}
   - component: {fileID: 212953903076476180}
+  - component: {fileID: 5340141325793455935}
   - component: {fileID: 114172514010890334}
   - component: {fileID: 61687861103116706}
   m_Layer: 8
@@ -191,6 +193,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5340141325793455935
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907086568854736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72ad4ab533aa4fc45878716f4137cf1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114172514010890334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +234,9 @@ MonoBehaviour:
   BaseCost: 20
   UpgradeCost: 40
   TotalCost: 60
-  AttackCooldown: 0
-  projectiles: []
+  AttackCooldown: 1
+  projectiles: {fileID: 1051651524490143753, guid: b76cb8b3ed996874a95a92ff84a0d6ea,
+    type: 3}
 --- !u!61 &61687861103116706
 BoxCollider2D:
   m_ObjectHideFlags: 0

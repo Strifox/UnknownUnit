@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
 namespace Assets.Entities
@@ -16,9 +17,9 @@ namespace Assets.Entities
         public int BaseCost;
         public int UpgradeCost;
         public int TotalCost;
-        public int AttackCooldown;
+        public float AttackCooldown;
 
-        public List<Projectile> projectiles;
+        public GameObject projectiles;
 
         private SpriteRenderer mySpriteRenderer;
 
@@ -29,6 +30,7 @@ namespace Assets.Entities
 
         void Update()
         {
+            
         }
 
 
@@ -37,13 +39,6 @@ namespace Assets.Entities
             if (tower != null)
                 mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
         }
-
-        //public void DeSelect(Tower tower)
-        //{
-        //    mySpriteRenderer.enabled = false;
-        //}
-
-
     }
 
     public enum TowerType
