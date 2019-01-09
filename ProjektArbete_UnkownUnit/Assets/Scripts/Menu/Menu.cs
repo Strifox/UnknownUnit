@@ -17,13 +17,13 @@ public class Menu : MonoBehaviour {
 				switch(hit.collider.tag)
 				{
 					case "PlayButton":
-						SceneManager.LoadScene(1);
-						break;
-					case "HighscoreButton":
 						SceneManager.LoadScene(2);
 						break;
-					case "CreditsButton":
+					case "HighscoreButton":
 						SceneManager.LoadScene(3);
+						break;
+					case "CreditsButton":
+						SceneManager.LoadScene(4);
 						break;
 					case "ExitButton":
 						Application.Quit();
