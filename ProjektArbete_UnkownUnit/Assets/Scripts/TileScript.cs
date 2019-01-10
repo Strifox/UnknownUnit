@@ -108,5 +108,3 @@ public class TileScript : MonoBehaviour
         spriteRenderer.color = newColor;
     }
 }
-
-            if (!Input.GetKey(KeyCode.LeftShift))
