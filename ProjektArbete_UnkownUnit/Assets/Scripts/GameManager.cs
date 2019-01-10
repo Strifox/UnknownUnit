@@ -36,6 +36,7 @@ namespace Assets.Scripts
 
         void Update()
         {
+
             if (Input.GetMouseButtonDown(0))
             {
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -63,7 +64,7 @@ namespace Assets.Scripts
             {
                 this.lvlLabel.text = "Level: " + this.selectedTower.Level;
                 this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
-                
+
             }
             else
             {
