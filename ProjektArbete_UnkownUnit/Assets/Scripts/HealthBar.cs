@@ -12,8 +12,7 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = GetComponentInParent<Enemy>().HP;
-        currentHealth = maxHealth;
+
         originalScale = gameObject.transform.localScale.x;
     }
 
