@@ -38,7 +38,7 @@ namespace Assets.Entities
 
                     if (healthBar.currentHealth <= 0)
                     {
-                        Destroy(target);
+                        Destroy(target.transform.parent.gameObject);
                         GameManager.Instance.Gold += 30;
                     }
                 }

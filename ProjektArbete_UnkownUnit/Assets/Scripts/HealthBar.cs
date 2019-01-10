@@ -4,24 +4,31 @@ using Assets.Entities;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour
-{ 
+{
+    private Transform bar;
     public float currentHealth;
     public float maxHealth;
+    public float percentHealth;
+    public float currentHealthX;
     private float originalScale;
 
     // Start is called before the first frame update
     void Start()
     {
+        bar = transform.Find("Bar");
         maxHealth = GetComponentInParent<Enemy>().HP;
         currentHealth = maxHealth;
-        originalScale = gameObject.transform.localScale.x;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Vector3 tmpScale = gameObject.transform.localScale;
-        tmpScale.x = currentHealth / maxHealth * originalScale;
-        gameObject.transform.localScale = tmpScale;
+        percentHealth = (currentHealth / maxHealth);
+        currentHealthX = Mathf.Lerp(0, 1, percentHealth);
+        transform.localScale = new Vector3(currentHealthX, 1);
+    }
+
+    private void SetSize()
+    {
+        bar.localScale = new Vector3(1f, 1f);
     }
 }
