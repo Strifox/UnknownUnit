@@ -11,8 +11,8 @@ TagManager:
   - Tower
   - UI
   - Button
-  tags:
-  - Obstacles
+  - Witch
+  - Enemy
   layers:
   - Default
   - TransparentFX

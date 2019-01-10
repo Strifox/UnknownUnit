@@ -34,7 +34,7 @@ public class SellBtn : MonoBehaviour
 			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 			if (hit.collider != null)
 			{
-				if(hit.collider.tag == "Tower")
+				if(hit.collider.CompareTag("Tower"))
 				{
 					SelectedTower = hit.collider.gameObject.GetComponent<Tower>();
 					Payback = this.SelectedTower.TotalCost / 4;
