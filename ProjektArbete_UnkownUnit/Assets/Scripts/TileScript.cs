@@ -51,7 +51,7 @@ public class TileScript : MonoBehaviour
         //Only tries to place a tower on the ground if the mouse is not over a button
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
         {
-            if(IsEmpty)
+            if(!Input.GetKey(KeyCode.LeftShift))
             {
                 if(Input.GetMouseButtonDown(0))
                 {
@@ -72,16 +72,6 @@ public class TileScript : MonoBehaviour
             if (!IsEmpty)
             {
                 ColorTile(occupiedTileColor);
-            }
-            if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift))
-            {
-                PlaceTower();
-                Hover.Instance.Deactivate();
-                GameManager.Instance.TowerBtn = null;
-            }
-            if (Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftShift))
-            {
-                PlaceTower();
             }
         }
     }
