@@ -59,7 +59,12 @@ public class SellBtn : MonoBehaviour
 			Payback = tower.TotalCost / 4;
 			this.PaybackText.text = "Get: " + Payback;
 		}
-	}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SelectedTower = null;
+        }
+    }
 
 	public void SellTower()
 	{

@@ -53,7 +53,7 @@ public class ToolTip : MonoBehaviour
 		}
 		else
 		{
-			position.position = new Vector3(SelectedTower.transform.position.x, SelectedTower.transform.position.y + 3.26f, SelectedTower.transform.position.z);
+			position.position = new Vector3(SelectedTower.transform.position.x, SelectedTower.transform.position.y + 2.95f, SelectedTower.transform.position.z);
 			image.enabled = true;
 			toolTiptText.enabled = true;
 			toolTiptText.text = "Name: " + SelectedTower.GetComponent<TowerBtn>().TowerPrefab.GetComponent<Tower>().Name + "\n" +
