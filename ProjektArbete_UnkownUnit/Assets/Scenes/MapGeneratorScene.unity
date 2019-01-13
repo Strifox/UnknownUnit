@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefabs:
   - {fileID: 1566548288630384, guid: c6ff246739e604e41a235507051c167f, type: 3}
-  - {fileID: 1979393238503626, guid: 0939c324e83598045ad02099e46a22da, type: 3}
+  - {fileID: 1196445824453851085, guid: 38303531cbce279439058d137f17e65d, type: 3}
   cameraMovement: {fileID: 1170598247}
   map: {fileID: 1850237025}
 --- !u!1 &1850237024
@@ -1291,6 +1291,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
+        type: 3}
+      propertyPath: m_Name
+      value: Target
+      objectReference: {fileID: 0}
     - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1345,11 +1350,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_Name
-      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec549116b4467e4f8b90955a44a2673, type: 3}
