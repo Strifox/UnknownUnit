@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
 public class EnemySpawnerScript : Singleton<EnemySpawnerScript>
@@ -37,6 +38,7 @@ public class EnemySpawnerScript : Singleton<EnemySpawnerScript>
                 Instantiate(enemy, wheretospawn, Quaternion.identity);
                 yield return new WaitForSeconds(SpawnWait);
             }
+            GameManager.Instance.Wave++;
             yield return new WaitForSeconds(WaveWait);
         }
     }

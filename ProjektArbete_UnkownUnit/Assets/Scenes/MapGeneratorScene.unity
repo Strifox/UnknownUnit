@@ -402,10 +402,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7361911238380878360, guid: 209e47c945c2e4748a338ca021928a2e, type: 3}
-  EnemyCount: 5
-  StartWait: 5
-  SpawnWait: 5
-  WaveWait: 10
+  EnemyCount: 1
+  StartWait: 2
+  SpawnWait: 2
+  WaveWait: 5
 --- !u!4 &1069328287
 Transform:
   m_ObjectHideFlags: 0
