@@ -39,6 +39,7 @@ public class EnemySpawnerScript : Singleton<EnemySpawnerScript>
                 yield return new WaitForSeconds(SpawnWait);
             }
             GameManager.Instance.Wave++;
+            EnemyCount = EnemyCount*2;
             yield return new WaitForSeconds(WaveWait);
         }
     }
