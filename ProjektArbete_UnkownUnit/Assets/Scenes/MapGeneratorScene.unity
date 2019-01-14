@@ -402,10 +402,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7361911238380878360, guid: 209e47c945c2e4748a338ca021928a2e, type: 3}
-  EnemyCount: 5
-  StartWait: 10
-  SpawnWait: 5
-  WaveWait: 10
+  EnemyCount: 20
+  StartWait: 20
+  SpawnWait: 1
+  WaveWait: 5
 --- !u!4 &1069328287
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezuoEDxUAIAAN0EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVj40Cgt5av9kCSCen04ouw1liDLHn0EUIy/PeuZIEdysHIu29339td+ZNwaRoorNJrzdlGMSDfB8SfybcBocH3Qi1XaE7Rwo2qwWpe/JB74bEJGp3kpdL1ku1hrow1aC6pMIAurayPlmj6HJB3/BvOfMgJT6MHf/rA0ywZnPFYgLSgO+goArO7xP/SyUPEt3AnC0HrBtiWf0AvahLD0hYmUVREeAWFEoKbSInYUxMUv9CTF8w4RXmBg8dWwPeVjUyugU9lacBG7ZqeFlxjl9qM5Keylc9UU3NoOb1R4XyN0XgS+LRJN//5h2lwl1rVvy5108TXsBUvDsiwoMb2ets3L74Sd/JIxYHuBPytQD6qtVZOMnRa7XyoMzBadK9XafMKikNnb6neGF3T9fo6yrtsep9OJ9lkOUwuU/KCzqEV73PB613E4+tWqND2sAqgcUC/kXtYFBNRaPWE/hh4pfv+RkXHimtj0RUFS890p5z2ULLCgx9C4excaQnBGuk3IKmwp2fMYm+HeePrVb3xrKi/MrF29F1uxE1IMHf4JLlxPavjdWymUscNmOrJWcFlP5n3PGKf5krKdtl6ki5hW6dLWvTD9o6zr1tGIGH36SwblbvxlGbpbLijGZuO8TlK2DhLZiSsIZcolIrnlmnsD05NdmUlrtzlazFYa9qExWeaHtf8o1Y9glyWaltoAPnUZrjKAo1F8HKyJePYoS1Yy2WYN/nMiVDFAVh+TZQHqct3q2neZclJw9+U9ZaczMM3JCdncv4HUEsDBBQAAAgIAAAIIexAD58LawAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jPWUVBKL0osyCgGChiCOKWZKSB2tFKqQYqJoaWxUVqSqUWisaGlblKicYqFKZA0MkgxNTawVIoFqi+pLEj1S8xNhegJSCzJSMvMS8nMS9dzL8pMcQcZrRRbCwBQSwECLQAUAAAICAAACCHs7qBA8VACAADdBAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsQA+fC2sAAAB3AAAACQAkAAAAAAAAAAAAAACdAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFMDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAIIexLUxhjUgIAAN8EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtz2jAQ/iuMziXjRyDQWwuE9pDHhHR68UVYa6xBljx6hJAM/70rWWCHcjDyfvv4vt2VPwmXpoXSKr3WnD0oBuT7iPgz+TYiNGAv1HKF5hQt3KgGrOblD7kT3jdBo5O8UrpZsR0slLEGzRUVBhDSyvpoiabPEXnHv/HchxzxlN350wee5snohMcSpAU9cE1usrn/TaaTGJPHiC7AyVLQpgW24R/Qx2Wz6J12bhJlRQ+voVRCcBNJEXtsg+YXevSSGacoMLDwvjXwXW19zmHgU1UZsFG9pscl19inLiP5qWztMzXU7DtOb1Q4XyObTAOfLunDf/g4DXClVfPrXDdNfA1b83KPDEtq7KC7Q/PyK3EnD1Ts6VbA3xrko1pr5SRD0GrnQ52BbNm/XqQtaij3vb2jemV0bd/ryzBv8tltOpvm09U4uYtT8oJOoRXvC8GbbfTH141Qoe1hGUDjgH4j97AqJnqh1RP6Y+CV7oY7FYF7ro1FKAqWnulWOe1dyT0e/BBKZxdKSwjWSL8FSYU9PmMWez3MK2xQ9Qq5p/7SxNoRO9+Jq5Bg7v2T5Ap6VofL2EytDg9g6idnBZfDZB55xD4tlJTdsg0kncM2Tle0HIbtHGdft4xAwm7TeZ5V28mM5ul8vKU5m03wmSVskidzEtaQSxRKxXPHNPYHpyb7shJX7vy9GK01bcPiM00Pa/7RqAFBLiu1KTWAfOoyXGSBxiJ4OdmKcezQBqzlMsybfBZEqHIPrLgkKoLU1bvVtOizFKTlb8p6S0EW4StSkBM5/QNQSwMEFAAACAgAAAgh7EAPnwtrAAAAdwAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSM9ZRUEovSizIKAYKGII4pZkpIHa0UqpBiomhpbFRWpKpRaKxoaVuUqJxioUpkDQySDE1NrBUigWqL6ksSPVLzE2F6AlILMlIy8xLycxL13MvykxxBxmtFFsLAFBLAQItABQAAAgIAAAIIexLUxhjUgIAAN8EAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIexAD58LawAAAHcAAAAJACQAAAAAAAAAAAAAAJ8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAVQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1313,72 +1313,3 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &4317596615645931520
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_Name
-      value: Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4ec549116b4467e4f8b90955a44a2673, type: 3}

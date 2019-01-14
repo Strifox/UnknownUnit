@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Entities;
 using Assets.Scripts;
 using UnityEngine;
 
@@ -17,6 +18,10 @@ public class EnemySpawnerScript : Singleton<EnemySpawnerScript>
     // Use this for initialization
     void Start()
     {
+        enemy.GetComponentInChildren<Enemy>().HP = 100;
+        randY = -2f;
+        randX = -14.5f;
+        wheretospawn = new Vector2(randX, randY);
         StartCoroutine(EnemySpawner());
     }
 
@@ -32,14 +37,11 @@ public class EnemySpawnerScript : Singleton<EnemySpawnerScript>
         {
             for (int i = 0; i < EnemyCount; i++)
             {
-                randY = -2f;
-                randX = -14.5f;
-                wheretospawn = new Vector2(randX, randY);
                 Instantiate(enemy, wheretospawn, Quaternion.identity);
                 yield return new WaitForSeconds(SpawnWait);
             }
             GameManager.Instance.Wave++;
-            EnemyCount = EnemyCount*2;
+            enemy.GetComponentInChildren<Enemy>().HP += 15;
             yield return new WaitForSeconds(WaveWait);
         }
     }
