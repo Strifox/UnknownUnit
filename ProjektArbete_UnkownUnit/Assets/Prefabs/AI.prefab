@@ -96,7 +96,7 @@ MonoBehaviour:
   endReachedDistance: 0.2
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &7361911238380878361
 MonoBehaviour:
@@ -163,10 +163,40 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3126201539265572849, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295283909821573504, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 212759042251050958, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 61635706140633304, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
@@ -208,46 +238,6 @@ PrefabInstance:
       propertyPath: m_UsedByComposite
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 58682136042283810, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_UseFullKinematicContacts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50996428028401652, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 427508927462306337, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8295283909821573504, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126201539265572849, guid: 08653ef768de71e48a2db609a0fdac04,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2122606601575264005, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}
       propertyPath: maxHealth
@@ -257,6 +247,16 @@ PrefabInstance:
         type: 3}
       propertyPath: currentHealth
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 58682136042283810, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427508927462306337, guid: 08653ef768de71e48a2db609a0fdac04,
+        type: 3}
+      propertyPath: Name
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58682136042283810, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}

@@ -333,6 +333,8 @@ namespace Pathfinding {
 				// If not drawing gizmos, then storing prevPath is quite unecessary
 				// So clear it and set prevPath to null
 				if (!drawGizmos) ReleaseClaimedPath();
+
+                
 			}
 		}
 

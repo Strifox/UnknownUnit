@@ -311,6 +311,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &549868624 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082400004488922401, guid: 28fd4e2bddc3e774989531604767a2c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197504218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589278184
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +356,8 @@ MonoBehaviour:
   goldLabel: {fileID: 2004169266}
   lvlLabel: {fileID: 356835488}
   dmgLabel: {fileID: 389833787}
+  healthLabel: {fileID: 1177436779}
+  waveLabel: {fileID: 549868624}
 --- !u!4 &589278186
 Transform:
   m_ObjectHideFlags: 0
@@ -388,7 +402,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7361911238380878360, guid: 209e47c945c2e4748a338ca021928a2e, type: 3}
-  spawnRate: 2
+  EnemyCount: 1
+  StartWait: 2
+  SpawnWait: 2
+  WaveWait: 5
 --- !u!4 &1069328287
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +516,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSpeed: 5
+--- !u!114 &1177436779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1295186974264977356, guid: 28fd4e2bddc3e774989531604767a2c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197504218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1197504218
 PrefabInstance:
   m_ObjectHideFlags: 0
