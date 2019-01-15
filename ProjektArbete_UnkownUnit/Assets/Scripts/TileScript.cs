@@ -49,6 +49,7 @@ public class TileScript : MonoBehaviour
 
     void OnMouseOver()
     {
+
         PlaceTower();
     }
 
@@ -57,11 +58,17 @@ public class TileScript : MonoBehaviour
         ColorTile(Color.white);
     }
 
+
+
     private void PlaceTower()
     {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
         //Only tries to place a tower on the ground if the mouse is not over a button
-        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
+        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null && hit.collider.gameObject.tag != "Stone")
         {
             if (!Input.GetKey(KeyCode.LeftShift))
             {
@@ -100,6 +107,7 @@ public class TileScript : MonoBehaviour
             Destroy(tower);
             Debug.Log("You are blocking path!");
         }
+
     }
     private void BuyTower()
     {

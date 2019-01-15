@@ -7,7 +7,7 @@ public class MapManager : Singleton<MapManager>
 {
 
     [SerializeField]
-    private GameObject[] tilePrefabs = new GameObject[] { };
+    public GameObject[] tilePrefabs = new GameObject[] { };
 
     [SerializeField]
     private CameraMovement cameraMovement;
