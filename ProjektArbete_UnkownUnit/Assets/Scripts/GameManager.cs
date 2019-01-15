@@ -2,6 +2,7 @@
 using System.Threading;
 using Assets.Entities;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Assets.Scripts
@@ -12,7 +13,7 @@ namespace Assets.Scripts
         private int wave;
         private int health;
 
-        private bool gameOver = false;
+        public bool gameOver = false;
         public TowerBtn TowerBtn { get; set; }
         public Tower selectedTower;
 
@@ -21,7 +22,6 @@ namespace Assets.Scripts
         [SerializeField] private Text dmgLabel;
         [SerializeField] private Text healthLabel;
         [SerializeField] private Text waveLabel;
-        [SerializeField] private GameObject GameOverMenu;
 
         public int Gold
         {
@@ -71,7 +71,7 @@ namespace Assets.Scripts
         {
             if (Health <= 0)
             {
-                GameOver();
+                SceneManager.LoadScene("GameOver");
             }
 
             SelectTower();
@@ -95,15 +95,6 @@ namespace Assets.Scripts
             if (Gold >= TowerBtn.Price)
             {
                 Gold -= TowerBtn.Price;
-            }
-        }
-
-        public void GameOver()
-        {
-            if (!gameOver)
-            {
-                gameOver = true;
-                GameOverMenu.SetActive(true);
             }
         }
 
@@ -167,6 +158,5 @@ namespace Assets.Scripts
                 Hover.Instance.Deactivate();
         }
     }
-
 }
 

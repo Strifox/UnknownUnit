@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9561665, y: 2.014636}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &6184871560950706053
 MonoBehaviour:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Enemy
   HP: 100
-  Damage: 10
+  Damage: 100
   MovementSpeed: 0
   debuffs: []
 --- !u!1001 &3807250484714261127
@@ -154,11 +154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4414494260517868}
     m_Modifications:
-    - target: {fileID: 8980721449244147241, guid: fe0ed3d29d7ead9459a7f0d910b00ce0,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 2284571412673324406, guid: fe0ed3d29d7ead9459a7f0d910b00ce0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980721449244147241, guid: fe0ed3d29d7ead9459a7f0d910b00ce0,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0ed3d29d7ead9459a7f0d910b00ce0, type: 3}
