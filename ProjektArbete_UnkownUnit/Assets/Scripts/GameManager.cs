@@ -12,7 +12,7 @@ namespace Assets.Scripts
         private int wave;
         private int health;
 
-        public static bool gameOver = false;
+        private bool gameOver = false;
         public TowerBtn TowerBtn { get; set; }
         public Tower selectedTower;
 
@@ -21,6 +21,7 @@ namespace Assets.Scripts
         [SerializeField] private Text dmgLabel;
         [SerializeField] private Text healthLabel;
         [SerializeField] private Text waveLabel;
+        [SerializeField] private GameObject GameOverMenu;
 
         public int Gold
         {
@@ -68,12 +69,9 @@ namespace Assets.Scripts
 
         void Update()
         {
-            if (gameOver)
-                return;
-
             if (Health <= 0)
             {
-                EndGame();
+                GameOver();
             }
 
             SelectTower();
@@ -92,23 +90,21 @@ namespace Assets.Scripts
             }
         }
 
-        private void EnableLabel()
+        public void BuyTower()
         {
-            if (selectedTower != null)
+            if (Gold >= TowerBtn.Price)
             {
-                this.lvlLabel.text = "Level: " + this.selectedTower.Level;
-                this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
-            }
-            else
-            {
-                this.lvlLabel.enabled = false;
-                this.dmgLabel.enabled = false;
+                Gold -= TowerBtn.Price;
             }
         }
 
-        private void EndGame()
+        public void GameOver()
         {
-            gameOver = true;
+            if (!gameOver)
+            {
+                gameOver = true;
+                GameOverMenu.SetActive(true);
+            }
         }
 
         private void SelectTower()
@@ -151,11 +147,17 @@ namespace Assets.Scripts
             DropTower();
         }
 
-        public void BuyTower()
+        private void EnableLabel()
         {
-            if (Gold >= TowerBtn.Price)
+            if (selectedTower != null)
             {
-                Gold -= TowerBtn.Price;
+                this.lvlLabel.text = "Level: " + this.selectedTower.Level;
+                this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
+            }
+            else
+            {
+                this.lvlLabel.enabled = false;
+                this.dmgLabel.enabled = false;
             }
         }
 
