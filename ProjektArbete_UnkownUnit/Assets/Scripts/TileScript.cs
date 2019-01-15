@@ -59,7 +59,6 @@ public class TileScript : MonoBehaviour
 
     private void PlaceTower()
     {
-        //ColorTile(occupiedTileColor);
 
         //Only tries to place a tower on the ground if the mouse is not over a button
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
@@ -94,10 +93,10 @@ public class TileScript : MonoBehaviour
         GraphNode node1 = AstarPath.active.GetNearest(new Vector3 { x = -14.5f, y = -2f, z = 0 }, NNConstraint.Default).node;
         GraphNode node2 = AstarPath.active.GetNearest(new Vector3 { x = 20f, y = -1.41f, z = 0 }, NNConstraint.Default).node;
 
+        tower = GameObject.FindGameObjectWithTag("Tower");
 
-        if (!PathUtilities.IsPathPossible(node1, node2))
+        if (!PathUtilities.IsPathPossible(node1, node2) && tower.tag == "Tower")
         {
-
             Destroy(tower);
             Debug.Log("You are blocking path!");
         }
