@@ -13,14 +13,8 @@ namespace Assets.Entities
 
         public List<Debuff> debuffs;
 
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-
+        void Start () {
+		
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -32,3 +26,12 @@ namespace Assets.Entities
         }
     }
 }
+
+        void Start()
+        {
+
+        }
+
+        void Update()
+        {
+
