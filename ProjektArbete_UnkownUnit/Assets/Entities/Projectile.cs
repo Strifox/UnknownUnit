@@ -40,6 +40,7 @@ namespace Assets.Entities
                     {
                         Destroy(target.transform.parent.gameObject);
                         GameManager.Instance.Gold += 30;
+                        GameManager.Instance.Score += 1;
                     }
                 }
                 Destroy(gameObject);

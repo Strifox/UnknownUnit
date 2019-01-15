@@ -469,13 +469,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb5672dfc423b14bad712176a1d411f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
   selectedTower: {fileID: 0}
   goldLabel: {fileID: 2004169266}
   lvlLabel: {fileID: 356835488}
   dmgLabel: {fileID: 389833787}
   healthLabel: {fileID: 1177436779}
   waveLabel: {fileID: 549868624}
-  GameOverMenu: {fileID: 2089532911}
 --- !u!4 &589278186
 Transform:
   m_ObjectHideFlags: 0
@@ -1590,16 +1590,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_Name
-      value: Target
-      objectReference: {fileID: 0}
-    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
-        type: 3}
-      propertyPath: m_TagString
-      value: Target
-      objectReference: {fileID: 0}
     - target: {fileID: 8465219187039971923, guid: 4ec549116b4467e4f8b90955a44a2673,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1654,6 +1644,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
+        type: 3}
+      propertyPath: m_Name
+      value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452133995230374457, guid: 4ec549116b4467e4f8b90955a44a2673,
+        type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec549116b4467e4f8b90955a44a2673, type: 3}
