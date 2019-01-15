@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Enemy
   HP: 100
-  Damage: 10
+  Damage: 100
   MovementSpeed: 0
   debuffs: []
 --- !u!1001 &3807250484714261127
