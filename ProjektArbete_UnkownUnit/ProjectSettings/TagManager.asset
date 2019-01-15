@@ -13,6 +13,7 @@ TagManager:
   - Button
   - Witch
   - Enemy
+  - Target
   layers:
   - Default
   - TransparentFX
