@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Assets.Entities;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Pathfinding;
 
 public class TileScript : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class TileScript : MonoBehaviour
     private Color32 emptyTileColor = new Color32(0, 255, 250, 0);
     private SpriteRenderer spriteRenderer;
     public bool IsEmpty { get; private set; }
-    bool isLeftShiftPressed = false;
+    private GameObject tower;
+    RaycastHit2D hit;
+
 
     // Use this for initialization
     void Start()
@@ -46,16 +49,25 @@ public class TileScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        //ColorTile(occupiedTileColor);
+        PlaceTower();
+    }
+
+    private void OnMouseExit()
+    {
+        ColorTile(Color.white);
+    }
+
+    private void PlaceTower()
+    {
 
         //Only tries to place a tower on the ground if the mouse is not over a button
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
         {
-            if(!Input.GetKey(KeyCode.LeftShift))
+            if (!Input.GetKey(KeyCode.LeftShift))
             {
-                if(Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0))
                 {
-                    PlaceTower();
+                    BuyTower();
                     Hover.Instance.Deactivate();
                     GameManager.Instance.TowerBtn = null;
                 }
@@ -63,7 +75,7 @@ public class TileScript : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (Input.GetMouseButtonDown(0))
-                    PlaceTower();
+                    BuyTower();
             }
             if (IsEmpty)
             {
@@ -76,16 +88,24 @@ public class TileScript : MonoBehaviour
         }
     }
 
-    private void OnMouseExit()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        ColorTile(Color.white);
-    }
+        GraphNode node1 = AstarPath.active.GetNearest(new Vector3 { x = -14.5f, y = -2f, z = 0 }, NNConstraint.Default).node;
+        GraphNode node2 = AstarPath.active.GetNearest(new Vector3 { x = 20f, y = -1.41f, z = 0 }, NNConstraint.Default).node;
 
-    private void PlaceTower()
-    {
-        if(GameManager.Instance.Gold >= GameManager.Instance.TowerBtn.Price)
+        tower = GameObject.FindGameObjectWithTag("Tower");
+
+        if (!PathUtilities.IsPathPossible(node1, node2) && tower.tag == "Tower")
         {
-            GameObject tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
+            Destroy(tower);
+            Debug.Log("You are blocking path!");
+        }
+    }
+    private void BuyTower()
+    {
+        if (GameManager.Instance.Gold >= GameManager.Instance.TowerBtn.Price)
+        {
+            tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
             IsEmpty = false;
             GameManager.Instance.BuyTower();

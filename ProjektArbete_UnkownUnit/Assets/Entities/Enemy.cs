@@ -26,12 +26,3 @@ namespace Assets.Entities
         }
     }
 }
-
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-
