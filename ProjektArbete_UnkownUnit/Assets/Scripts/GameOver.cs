@@ -6,7 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public static GameOver ins;
+
     [SerializeField] private GameObject GameOverMenu;
+    public static int PlayerScore;
+
+    void Awake()
+    {
+        ins = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +30,11 @@ public class GameOver : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("MapGeneratorScene");
     }
 
     public void Exit()
     {
-
+        SceneManager.LoadScene("Menu");
     }
 }

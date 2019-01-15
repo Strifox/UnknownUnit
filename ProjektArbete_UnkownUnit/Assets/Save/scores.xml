@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<PlayerDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Players>
+    <ItemEntry>
+      <PlayerName>Emil</PlayerName>
+      <PlayerScore>2</PlayerScore>
+    </ItemEntry>
+    <ItemEntry>
+      <PlayerName>Emil</PlayerName>
+      <PlayerScore>1</PlayerScore>
+    </ItemEntry>
+    <ItemEntry>
+      <PlayerName>André</PlayerName>
+      <PlayerScore>4</PlayerScore>
+    </ItemEntry>
+    <ItemEntry>
+      <PlayerName>Johan</PlayerName>
+      <PlayerScore>8</PlayerScore>
+    </ItemEntry>
+    <ItemEntry>
+      <PlayerName>XXXTentacion</PlayerName>
+      <PlayerScore>63</PlayerScore>
+    </ItemEntry>
+  </Players>
+</PlayerDatabase>
