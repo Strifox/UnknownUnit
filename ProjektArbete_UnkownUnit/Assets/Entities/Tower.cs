@@ -30,14 +30,13 @@ namespace Assets.Entities
 
         void Update()
         {
-            
+
         }
 
 
-        public void Select(Tower tower)
+        public void Select()
         {
-            if (tower != null)
-                mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
+            mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
         }
     }
 

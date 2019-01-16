@@ -5,18 +5,20 @@ using Assets.Entities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Pathfinding;
+using UnityEditor.PackageManager.Requests;
 
 public class TileScript : MonoBehaviour
 {
     //TODO: Not Placing towers on correct tile
 
-
     public Point GridPosition { get; private set; }
     private Color32 occupiedTileColor = new Color32(255, 0, 0, 255);
-    private Color32 emptyTileColor = new Color32(0, 255, 250, 0);
     private SpriteRenderer spriteRenderer;
+    private Color32 emptyTileColor = new Color32(0, 255, 250, 0);
     public bool IsEmpty { get; private set; }
     private GameObject tower;
+    private Tower myTower;
+
     RaycastHit2D hit;
 
 
@@ -60,7 +62,6 @@ public class TileScript : MonoBehaviour
     private void PlaceTower()
     {
         //ColorTile(occupiedTileColor);
-
         //Only tries to place a tower on the ground if the mouse is not over a button
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.TowerBtn != null)
         {
@@ -87,6 +88,18 @@ public class TileScript : MonoBehaviour
                 ColorTile(occupiedTileColor);
             }
         }
+        else if (GameManager.Instance.TowerBtn == null && Input.GetMouseButtonDown(0))
+        {
+            if (myTower != null)
+            {
+                GameManager.Instance.EnableRange(myTower);
+            }
+            else
+            {
+                GameManager.Instance.DisableRange();
+            }
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -97,17 +110,18 @@ public class TileScript : MonoBehaviour
 
         if (!PathUtilities.IsPathPossible(node1, node2))
         {
-
             Destroy(tower);
             Debug.Log("You are blocking path!");
         }
     }
+
     private void BuyTower()
     {
         if (GameManager.Instance.Gold >= GameManager.Instance.TowerBtn.Price)
         {
-            tower = Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
+            tower = (GameObject)Instantiate(GameManager.Instance.TowerBtn.TowerPrefab, transform.position, Quaternion.identity);
             tower.transform.SetParent(transform);
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
             IsEmpty = false;
             GameManager.Instance.BuyTower();
             ColorTile(Color.white);

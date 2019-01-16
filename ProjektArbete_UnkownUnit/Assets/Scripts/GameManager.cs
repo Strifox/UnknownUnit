@@ -112,30 +112,40 @@ namespace Assets.Scripts
                     if (hit.collider.CompareTag("Tower"))
                     {
                         selectedTower = hit.transform.gameObject.GetComponent<Tower>();
-                        this.selectedTower.Select(selectedTower);
                         this.lvlLabel.enabled = true;
                         this.dmgLabel.enabled = true;
+                    }
+                    else
+                    {
+                        DisableRange();
                     }
                 }
                 else
                 {
-                    selectedTower = null;
+                    DisableRange();
                 }
             }
+        }
 
+        public void EnableRange(Tower tower)
+        {
             if (selectedTower != null)
             {
-                this.lvlLabel.text = "Level: " + this.selectedTower.Level;
-                this.dmgLabel.text = "Damage: " + this.selectedTower.Damage;
-
+                selectedTower.Select();
             }
-            else
+
+            selectedTower = tower;
+            selectedTower.Select();
+        }
+
+        public void DisableRange()
+        {
+            if (selectedTower != null)
             {
-                this.lvlLabel.enabled = false;
-                this.dmgLabel.enabled = false;
+                selectedTower.Select();
             }
 
-            DropTower();
+            selectedTower = null;
         }
 
         private void EnableLabel()
