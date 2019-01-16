@@ -46,6 +46,14 @@ public class UpgradeBtn : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Tower"))
                     SelectedTower = hit.transform.gameObject.GetComponent<Tower>();
+                else if(hit.collider.CompareTag("UI"))
+                {
+
+                }
+                else
+                {
+                    SelectedTower = null;
+                }
             }
             else
             {

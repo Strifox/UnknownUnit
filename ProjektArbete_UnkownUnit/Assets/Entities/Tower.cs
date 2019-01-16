@@ -23,6 +23,12 @@ namespace Assets.Entities
 
         private SpriteRenderer mySpriteRenderer;
 
+        public SpriteRenderer SpriteRenderer
+        {
+            get { return mySpriteRenderer; }
+            set { mySpriteRenderer = value; }
+        }
+
         void Start()
         {
             mySpriteRenderer = GetComponent<Tower>().transform.GetChild(0).GetComponent<SpriteRenderer>();

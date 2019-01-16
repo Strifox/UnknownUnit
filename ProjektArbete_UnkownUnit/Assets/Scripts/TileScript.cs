@@ -77,6 +77,7 @@ public class TileScript : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     BuyTower();
+                    tower.GetComponent<Tower>().transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                     Hover.Instance.Deactivate();
                     GameManager.Instance.TowerBtn = null;
                 }
@@ -95,18 +96,18 @@ public class TileScript : MonoBehaviour
                 ColorTile(occupiedTileColor);
             }
         }
-        else if (GameManager.Instance.TowerBtn == null && Input.GetMouseButtonDown(0))
-        {
-            if (myTower != null)
-            {
-                GameManager.Instance.EnableRange(myTower);
-            }
-            else
-            {
-                GameManager.Instance.DisableRange();
-            }
+        //else if (GameManager.Instance.TowerBtn == null && Input.GetMouseButtonDown(0))
+        //{
+        //    if (myTower != null)
+        //    {
+        //        GameManager.Instance.EnableRange(myTower);
+        //    }
+        //    else
+        //    {
+        //        GameManager.Instance.DisableRange();
+        //    }
 
-        }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

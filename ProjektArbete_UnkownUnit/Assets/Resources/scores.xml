@@ -5,5 +5,9 @@
       <PlayerName>André</PlayerName>
       <PlayerScore>40</PlayerScore>
     </ItemEntry>
+    <ItemEntry>
+      <PlayerName />
+      <PlayerScore>0</PlayerScore>
+    </ItemEntry>
   </Players>
 </PlayerDatabase>

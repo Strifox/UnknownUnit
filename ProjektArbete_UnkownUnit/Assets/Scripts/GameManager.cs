@@ -122,38 +122,41 @@ namespace Assets.Scripts
                         selectedTower = hit.transform.gameObject.GetComponent<Tower>();
                         this.lvlLabel.enabled = true;
                         this.dmgLabel.enabled = true;
+                        EnableRange(selectedTower);
+                    }
+                    else if(hit.collider.CompareTag("UI"))
+                    {
                     }
                     else
                     {
                         DisableRange();
+                        selectedTower = null;
                     }
                 }
                 else
                 {
                     DisableRange();
+                    selectedTower = null;
+                    //selectedTower.SpriteRenderer.enabled = false;
                 }
             }
         }
 
         public void EnableRange(Tower tower)
         {
-            if (selectedTower != null)
+            if (selectedTower != null && selectedTower.SpriteRenderer != null)
             {
-                selectedTower.Select();
+                selectedTower.SpriteRenderer.enabled = true;
             }
-
-            selectedTower = tower;
-            selectedTower.Select();
+            //selectedTower.Select();
         }
 
         public void DisableRange()
         {
-            if (selectedTower != null)
+            if (selectedTower != null && selectedTower.SpriteRenderer != null)
             {
-                selectedTower.Select();
+                selectedTower.SpriteRenderer.enabled = false;
             }
-
-            selectedTower = null;
         }
 
         private void EnableLabel()
