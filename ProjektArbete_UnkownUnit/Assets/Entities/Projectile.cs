@@ -18,7 +18,6 @@ namespace Assets.Entities
 
         void Start ()
         {
-            damage = Tower.Instance.Damage;
             startTime = Time.time;
             distance = Vector2.Distance(startPos, targetPos);
         }

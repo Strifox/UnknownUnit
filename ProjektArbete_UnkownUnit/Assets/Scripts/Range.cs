@@ -46,6 +46,7 @@ public class Range : Singleton<Range>
     private void Shoot(Collider2D target)
     {
         GameObject projectile = GetComponentInParent<Tower>().projectiles;
+        projectile.GetComponent<Projectile>().damage = this.GetComponentInParent<Tower>().Damage;
 
         Vector3 startPos = gameObject.transform.position;
         Vector3 targetPos = target.transform.position;
