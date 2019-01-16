@@ -13,8 +13,9 @@ namespace Assets.Entities
 
         public List<Debuff> debuffs;
 
-        void Start () {
-		
+        void Start()
+        {
+
         }
 
         void Update()

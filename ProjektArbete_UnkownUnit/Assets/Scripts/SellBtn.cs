@@ -39,7 +39,15 @@ public class SellBtn : MonoBehaviour
 					SelectedTower = hit.collider.gameObject.GetComponent<Tower>();
 					Payback = this.SelectedTower.TotalCost / 4;
 				}
-			}
+                else if (hit.collider.CompareTag("UI"))
+                {
+
+                }
+                else
+                {
+                    SelectedTower = null;
+                }
+            }
 			else
 			{
 				SelectedTower = null;

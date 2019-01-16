@@ -23,6 +23,12 @@ namespace Assets.Entities
 
         private SpriteRenderer mySpriteRenderer;
 
+        public SpriteRenderer SpriteRenderer
+        {
+            get { return mySpriteRenderer; }
+            set { mySpriteRenderer = value; }
+        }
+
         void Start()
         {
             mySpriteRenderer = GetComponent<Tower>().transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -30,14 +36,13 @@ namespace Assets.Entities
 
         void Update()
         {
-            
+
         }
 
 
-        public void Select(Tower tower)
+        public void Select()
         {
-            if (tower != null)
-                mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
+            mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
         }
     }
 
