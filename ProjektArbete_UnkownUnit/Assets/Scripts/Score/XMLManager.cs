@@ -27,7 +27,7 @@ public class XMLManager : MonoBehaviour
     {
         PlayerDb.list.Add(new ItemEntry { PlayerName = NameTextBox.text, PlayerScore = GameOver.PlayerScore });
         XmlSerializer serializer = new XmlSerializer(typeof(PlayerDatabase));
-        FileStream stream = new FileStream(Application.dataPath + "/Save/scores.xml", FileMode.Create, FileAccess.ReadWrite, FileShare.None);
+        FileStream stream = new FileStream(Application.dataPath + "/Resources/scores.xml", FileMode.Create, FileAccess.ReadWrite, FileShare.None);
         serializer.Serialize(stream, PlayerDb);
         stream.Close();
     }
@@ -35,7 +35,7 @@ public class XMLManager : MonoBehaviour
     public void Load()
     {
         XmlSerializer serializer = new XmlSerializer(typeof(PlayerDatabase));
-        FileStream stream = new FileStream(Application.dataPath + "/Save/scores.xml", FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+        FileStream stream = new FileStream(Application.dataPath + "/Resources/scores.xml", FileMode.Open, FileAccess.ReadWrite, FileShare.None);
         PlayerDb = serializer.Deserialize(stream) as PlayerDatabase;
         stream.Close();
     }
