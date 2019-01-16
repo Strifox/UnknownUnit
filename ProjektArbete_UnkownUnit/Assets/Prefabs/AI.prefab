@@ -119,18 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7361911238380878364}
     m_Modifications:
-    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 4414494260517868, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.08
@@ -162,6 +150,18 @@ PrefabInstance:
     - target: {fileID: 4414494260517868, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389418677835684, guid: 08653ef768de71e48a2db609a0fdac04, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3126201539265572849, guid: 08653ef768de71e48a2db609a0fdac04,
         type: 3}

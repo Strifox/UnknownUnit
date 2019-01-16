@@ -10,6 +10,7 @@ namespace Assets.Scripts
     public class GameManager : Singleton<GameManager>
     {
         private int gold;
+        private int score;
         private int wave;
         private int health;
 
@@ -56,6 +57,12 @@ namespace Assets.Scripts
             }
         }
 
+        public int Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
+
         void Start()
         {
             Wave = 0;
@@ -71,6 +78,7 @@ namespace Assets.Scripts
         {
             if (Health <= 0)
             {
+                GameOver.PlayerScore = Score;
                 SceneManager.LoadScene("GameOver");
             }
 
