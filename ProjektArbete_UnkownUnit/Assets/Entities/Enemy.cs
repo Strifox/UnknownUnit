@@ -1,20 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
-	public string Name;
-	public int HP;
-	public int Damage;
-	public int MovementSpeed;
+namespace Assets.Entities
+{
+    public class Enemy : MonoBehaviour
+    {
+        public string Name;
+        public int HP;
+        public int Damage;
+        public int MovementSpeed;
 
-	public List<Debuff> debuffs;
+        public List<Debuff> debuffs;
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
+        void Start()
+        {
+
+        }
+
+        void Update()
+        {
+
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Target"))
+            {
+                GameManager.Instance.Health = GameManager.Instance.Health - Damage;
+            }
+        }
+    }
 }
